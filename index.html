@@ -1,0 +1,1802 @@
+<!doctype html>
+<html lang="ku" dir="rtl">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Huda Physiotherapy Clinic — پروفایل</title>
+  <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <link rel="stylesheet" href="styles.css">
+<link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root {
+      --primary: #009ca5;
+      --primary-dark: #007a82;
+      --primary-light: #4dbec5;
+      --secondary: #00096c;
+      --secondary-light: #333399;
+      --accent: #ff5722;
+      --accent-light: #ff8a65;
+      --bg: #f8fdfb;
+      --card: #ffffff;
+      --text: #333333;
+      --text-light: #666666;
+      --text-lighter: #999999;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+      --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.12);
+      --radius: 16px;
+      --transition: all 0.3s ease;
+    }
+
+    /* Dark mode variables */
+    [data-theme="dark"] {
+      --primary: #00bcd4;
+      --primary-dark: #008c9e;
+      --primary-light: #62efff;
+      --secondary: #3f51b5;
+      --secondary-light: #757de8;
+      --accent: #ff7043;
+      --accent-light: #ffab91;
+      --bg: #121212;
+      --card: #1e1e1e;
+      --text: #e0e0e0;
+      --text-light: #b0b0b0;
+      --text-lighter: #888888;
+      --shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      --shadow-hover: 0 15px 40px rgba(0, 0, 0, 0.4);
+    }
+
+    * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'IBM Plex Sans Arabic', sans-serif;
+}
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+      overflow-x: hidden;
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 20px;
+    }
+
+    /* Theme Toggle */
+    .theme-toggle {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      z-index: 1000;
+      background: var(--card);
+      border: none;
+      width: 50px;
+      height: 50px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      color: var(--text);
+    }
+
+    .theme-toggle:hover {
+      transform: scale(1.1);
+    }
+
+    /* Header */
+    header {
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      color: white;
+      padding: 20px 0;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+
+    .header-content {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      position: relative;
+      z-index: 2;
+    }
+
+    .logo {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+    }
+
+    .logo-img {
+      width: 70px;
+      height: 70px;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      transform: none !important;
+    }
+    .logo-img img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* This makes sure the image fits properly */
+  display: block;
+  transform: none !important;
+}
+
+    
+
+    .logo-text h1 {
+      font-size: 22px;
+      margin-bottom: 5px;
+    }
+
+    .logo-text p {
+      font-size: 14px;
+      opacity: 0.9;
+    }
+
+    .nav-toggle {
+      display: none;
+      background: none;
+      border: none;
+      color: white;
+      font-size: 24px;
+      cursor: pointer;
+    }
+
+    .nav-toggle:hover {
+      color: var(--accent-light);
+    }
+
+    nav ul {
+      display: flex;
+      list-style: none;
+      gap: 25px;
+    }
+
+    nav a {
+      color: white;
+      text-decoration: none;
+      font-weight: 600;
+      transition: var(--transition);
+      position: relative;
+      padding: 5px 0;
+    }
+
+    nav a:hover {
+      color: rgba(255, 255, 255, 0.8);
+    }
+
+    nav a::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 0;
+      height: 2px;
+      background: white;
+      transition: var(--transition);
+    }
+
+    nav a:hover::after {
+      width: 100%;
+    }
+
+    /* Hero Section */
+    .hero {
+      padding: 80px 0;
+      background: linear-gradient(135deg, rgba(0, 156, 165, 0.1), rgba(0, 9, 108, 0.05));
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle, rgba(0, 156, 165, 0.05) 0%, transparent 70%);
+      animation: pulse 15s infinite linear;
+    }
+
+    @keyframes pulse {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+
+    .hero-content {
+      display: flex;
+      align-items: center;
+      gap: 50px;
+      position: relative;
+      z-index: 2;
+    }
+
+    .hero-text {
+      flex: 1;
+    }
+
+    .hero-text h2 {
+      font-size: 36px;
+      margin-bottom: 20px;
+      color: var(--secondary);
+      line-height: 1.3;
+    }
+
+    .hero-text p {
+      font-size: 18px;
+      margin-bottom: 30px;
+      color: var(--text-light);
+    }
+
+    .hero-image {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .hero-img {
+      width: 100%;
+      max-width: 400px;
+      height: 400px;
+      border-radius: var(--radius);
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      box-shadow: var(--shadow);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 18px;
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-img img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .hero-img::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" preserveAspectRatio="none"><path d="M0,0 L100,0 L100,100 Z" fill="rgba(255,255,255,0.1)"/></svg>');
+      background-size: cover;
+    }
+
+    .hero-img:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: var(--accent);
+      color: white;
+      padding: 14px 30px;
+      border-radius: 50px;
+      text-decoration: none;
+      font-weight: 700;
+      font-size: 16px;
+      transition: var(--transition);
+      box-shadow: 0 5px 15px rgba(255, 87, 34, 0.3);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .cta-button::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.6s;
+    }
+
+    .cta-button:hover {
+      background: #e64a19;
+      transform: translateY(-3px);
+      box-shadow: 0 8px 20px rgba(255, 87, 34, 0.4);
+    }
+
+    .cta-button:hover::before {
+      transform: translateX(100%);
+    }
+
+    /* Sections */
+    section {
+      padding: 80px 0;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+
+    .section-title h2 {
+      font-size: 32px;
+      color: var(--secondary);
+      margin-bottom: 15px;
+      position: relative;
+      display: inline-block;
+    }
+
+    .section-title h2::after {
+      content: '';
+      position: absolute;
+      bottom: -10px;
+      right: 50%;
+      transform: translateX(50%);
+      width: 80px;
+      height: 4px;
+      background: var(--accent);
+      border-radius: 2px;
+    }
+
+    .section-title p {
+      color: var(--text-light);
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    /* Cards */
+    .cards-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 5px;
+      height: 100%;
+      background: var(--primary);
+      transition: var(--transition);
+    }
+
+    .card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .card:hover::before {
+      width: 100%;
+      opacity: 0.1;
+    }
+
+    .card h3 {
+      font-size: 22px;
+      margin-bottom: 15px;
+      color: var(--secondary);
+    }
+
+    .card p {
+      color: var(--text-light);
+      margin-bottom: 20px;
+    }
+
+    .card ul {
+      padding-right: 20px;
+      margin-bottom: 20px;
+    }
+
+    .card li {
+      margin-bottom: 10px;
+      position: relative;
+    }
+
+    .card li::before {
+      content: '•';
+      color: var(--primary);
+      font-weight: bold;
+      position: absolute;
+      right: -15px;
+    }
+
+    /* Treatments */
+    .treatments-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .treatment-item {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 20px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .treatment-item::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 4px;
+      background: var(--primary);
+      transform: translateX(100%);
+      transition: var(--transition);
+    }
+
+    .treatment-item:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .treatment-item:hover::before {
+      transform: translateX(0);
+    }
+
+    .treatment-icon {
+      font-size: 40px;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    /* Equipment Section */
+    .equipment-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+      gap: 30px;
+    }
+
+    .equipment-card {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 25px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .equipment-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 5px;
+      background: var(--accent);
+      transform: translateY(-100%);
+      transition: var(--transition);
+    }
+
+    .equipment-card:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .equipment-card:hover::before {
+      transform: translateY(0);
+    }
+
+    .equipment-image {
+      width: 100%;
+      height: 400px;
+      border-radius: 12px;
+      overflow: hidden;
+      margin-bottom: 20px;
+      background: #f5f5f5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+    }
+
+    .equipment-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: var(--transition);
+    }
+
+    .equipment-card:hover .equipment-image img {
+      transform: scale(1.05);
+    }
+
+    .machine-placeholder {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      background: linear-gradient(135deg, #e0e0e0, #f5f5f5);
+      color: var(--text-light);
+    }
+
+    .machine-placeholder i {
+      font-size: 60px;
+      margin-bottom: 15px;
+      color: var(--primary);
+    }
+
+    .equipment-card h3 {
+      font-size: 20px;
+      margin-bottom: 15px;
+      color: var(--secondary);
+      text-align: center;
+    }
+
+    .equipment-card p {
+      color: var(--text-light);
+      margin-bottom: 15px;
+      flex-grow: 1;
+    }
+
+    .equipment-specs {
+      background: rgba(0, 156, 165, 0.05);
+      padding: 15px;
+      border-radius: 8px;
+      margin-top: 10px;
+    }
+
+    .equipment-specs h4 {
+      font-size: 16px;
+      margin-bottom: 10px;
+      color: var(--primary);
+    }
+
+    .equipment-specs ul {
+      padding-right: 20px;
+      margin: 0;
+    }
+
+    .equipment-specs li {
+      font-size: 14px;
+      margin-bottom: 5px;
+      color: var(--text-light);
+    }
+
+    /* Team */
+    .team-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+    }
+
+    .team-member {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow);
+      transition: var(--transition);
+      text-align: center;
+    }
+
+    .team-member:hover {
+      transform: translateY(-10px);
+      box-shadow: var(--shadow-hover);
+    }
+
+    .member-img {
+      width: 120px;
+      height: 120px;
+      border-radius: 50%;
+      background: linear-gradient(135deg, var(--primary), var(--secondary));
+      margin: 0 auto 20px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      font-size: 40px;
+      transition: var(--transition);
+    }
+
+    .team-member:hover .member-img {
+      transform: scale(1.1);
+    }
+
+    .team-member h3 {
+      font-size: 20px;
+      margin-bottom: 10px;
+      color: var(--secondary);
+    }
+
+    .team-member p {
+      color: var(--text-light);
+    }
+
+    /* Contact */
+    .contact-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 30px;
+    }
+
+    .contact-info {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      margin-bottom: 25px;
+    }
+
+    .contact-icon {
+      width: 50px;
+      height: 50px;
+      background: rgba(0, 156, 165, 0.1);
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-left: 15px;
+      color: var(--primary);
+      font-size: 20px;
+      transition: var(--transition);
+    }
+
+    .contact-item:hover .contact-icon {
+      background: var(--primary);
+      color: white;
+      transform: rotate(15deg);
+    }
+
+    .contact-details h4 {
+      font-size: 18px;
+      margin-bottom: 5px;
+      color: var(--secondary);
+    }
+
+    .contact-details p {
+      color: var(--text-light);
+    }
+
+    .contact-form {
+      background: var(--card);
+      border-radius: var(--radius);
+      padding: 30px;
+      box-shadow: var(--shadow);
+    }
+
+    .form-group {
+      margin-bottom: 20px;
+    }
+
+    .form-group label {
+      display: block;
+      margin-bottom: 8px;
+      color: var(--text);
+      font-weight: 600;
+    }
+
+    .form-control {
+      width: 100%;
+      padding: 12px 15px;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      font-size: 16px;
+      transition: var(--transition);
+      background: var(--card);
+      color: var(--text);
+    }
+
+    .form-control:focus {
+      border-color: var(--primary);
+      outline: none;
+      box-shadow: 0 0 0 3px rgba(0, 156, 165, 0.2);
+    }
+
+    textarea.form-control {
+      min-height: 120px;
+      resize: vertical;
+    }
+
+    .submit-btn {
+      background: var(--primary);
+      color: white;
+      border: none;
+      padding: 14px 30px;
+      border-radius: 50px;
+      font-weight: 700;
+      font-size: 16px;
+      cursor: pointer;
+      transition: var(--transition);
+      width: 100%;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .submit-btn::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transform: translateX(-100%);
+      transition: transform 0.6s;
+    }
+
+    .submit-btn:hover {
+      background: var(--primary-dark);
+      transform: translateY(-3px);
+      box-shadow: 0 5px 15px rgba(0, 156, 165, 0.3);
+    }
+
+    .submit-btn:hover::before {
+      transform: translateX(100%);
+    }
+
+    /* Footer */
+    footer {
+      background: var(--secondary);
+      color: white;
+      padding: 50px 0 20px;
+    }
+
+    .footer-content {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 40px;
+      margin-bottom: 40px;
+    }
+
+    .footer-column h3 {
+      font-size: 20px;
+      margin-bottom: 20px;
+      position: relative;
+      padding-bottom: 10px;
+    }
+
+    .footer-column h3::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 50px;
+      height: 3px;
+      background: var(--accent);
+    }
+
+    .footer-column p {
+      color: rgba(255, 255, 255, 0.7);
+      margin-bottom: 15px;
+    }
+
+    .footer-links {
+      list-style: none;
+    }
+
+    .footer-links li {
+      margin-bottom: 10px;
+    }
+
+    .footer-links a {
+      color: rgba(255, 255, 255, 0.7);
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .footer-links a:hover {
+      color: white;
+      padding-right: 5px;
+    }
+
+    .social-links {
+      display: flex;
+      gap: 15px;
+      margin-top: 20px;
+    }
+
+    .social-link {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      transition: var(--transition);
+    }
+
+    .social-link:hover {
+      background: var(--accent);
+      transform: translateY(-3px);
+    }
+
+    .footer-bottom {
+      text-align: center;
+      padding-top: 20px;
+      border-top: 1px solid rgba(255, 255, 255, 0.1);
+      color: rgba(255, 255, 255, 0.7);
+      font-size: 14px;
+    }
+
+    /* Animations */
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    /* Back to Top Button */
+    .back-to-top {
+      position: fixed;
+      bottom: 30px;
+      left: 30px;
+      width: 50px;
+      height: 50px;
+      background: var(--accent);
+      color: white;
+      border-radius: 50%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-decoration: none;
+      font-size: 20px;
+      box-shadow: 0 4px 12px rgba(255, 87, 34, 0.3);
+      transition: var(--transition);
+      opacity: 0;
+      visibility: hidden;
+      z-index: 1000;
+    }
+
+    .back-to-top.visible {
+      opacity: 1;
+      visibility: visible;
+    }
+
+    .back-to-top:hover {
+      background: #e64a19;
+      transform: translateY(-5px);
+    }
+
+    /* Responsive */
+    @media (max-width: 992px) {
+      .hero-content {
+        flex-direction: column;
+        text-align: center;
+      }
+      
+      .hero-text h2 {
+        font-size: 30px;
+      }
+    }
+
+    @media (max-width: 768px) {
+      .nav-toggle {
+        display: block;
+      }
+      
+      nav {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 80%;
+        height: 100vh;
+        background: var(--secondary);
+        z-index: 1000;
+        transition: var(--transition);
+        padding: 80px 30px 30px;
+        box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
+      }
+      
+      nav.active {
+        right: 0;
+      }
+      
+      nav ul {
+        flex-direction: column;
+        gap: 20px;
+      }
+      
+      .close-menu {
+        position: absolute;
+        top: 20px;
+        left: 20px;
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+      }
+      
+      section {
+        padding: 60px 0;
+      }
+      
+      .section-title h2 {
+        font-size: 28px;
+      }
+
+      .back-to-top {
+        left: 20px;
+        bottom: 20px;
+        width: 45px;
+        height: 45px;
+      }
+
+      .equipment-container {
+        grid-template-columns: 1fr;
+      }
+
+      .theme-toggle {
+        top: 15px;
+        left: 15px;
+        width: 45px;
+        height: 45px;
+      }
+    }
+
+    @media (max-width: 576px) {
+      .container {
+        padding: 0 15px;
+      }
+      
+      .hero-text h2 {
+        font-size: 26px;
+      }
+      
+      .card, .contact-info, .contact-form {
+        padding: 20px;
+      }
+
+      .equipment-card {
+        padding: 20px;
+      }
+
+      .hero-img {
+        height: 250px;
+      }
+    }
+</style>
+</head>
+<body>
+  <script href="clinic.js"></script>
+  <!-- Theme Toggle -->
+  <button class="theme-toggle" id="themeToggle">
+    <i class="fas fa-moon"></i>
+  </button>
+
+  <!-- Header -->
+  <header>
+    <div class="container">
+      <div class="header-content">
+        <div class="logo">
+          <div class="logo-img">
+            <img src="loogoo-removebg-preview.png" alt="">
+          </div>
+          <div class="logo-text">
+            <h1>کلینیکی پزیشکی هودا</h1>
+            <p> تایبەت بە چارەسەری سروشتی و ئازاری درێژ خایــەن</p>
+          </div>
+        </div>
+        
+        <button class="nav-toggle" id="navToggle">
+          <i class="fas fa-bars"></i>
+        </button>
+        
+        <nav id="mainNav">
+          <button class="close-menu" id="closeMenu">
+            <i class="fas fa-times"></i>
+          </button>
+          <ul>
+            <li><a href="#home">سەرەکی</a></li>
+            <li><a href="#about">دەربارەی ئێمە</a></li>
+            <li><a href="#services">خزمەتگوزاریەکان</a></li>
+            <li><a href="#treatments">چارەسەرەکان</a></li>
+            <li><a href="#equipment">ئامێرەکان</a></li>
+            <li><a href="#team">تیم</a></li>
+            <li><a href="#contact">پەیوەندی</a></li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero" id="home">
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-text fade-in">
+          <h2>چارەسەری سرووشتی — یەکێک لە کاریگەرترین رێگاکان بۆ گەڕاندنەوەی توانای جەستەیی</h2>
+          <p>ئێمە وەک کلینیکی هودا، پێشەنگین لە چارەسەری ئازاری درێژخایەن و دابینکردنی کوالیتی کارێکی بەرز. بە بەکارهێنانی تازەترین تەکنەلۆجیا و ستافی کارامە.</p>
+          <a href="#contact" class="cta-button">پەیوەندی بگرە</a>
+        </div>
+        <div class="hero-image fade-in">
+          <div class="hero-img">
+            <img src="h.jpg" alt="کلینیکی هودا">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>دەربارەی ئێمە</h2>
+        <p>کلینیکی هودا لە 22/02/2022 دامەزراوە. لە ماوەی ئەم ساڵانەدا، ئێمە پێشەنگین  لە چارەسەرکردنی ئازاری درێژخایەن</p>
+      </div>
+      
+      <div class="cards-container">
+        <div class="card fade-in">
+          <h3>ئامانجی ئێمە</h3>
+          <p> هەوڵ دەدەین بۆ:</p>
+          <ul>
+            <li>خزمەتکردن و بەرەوپێشچوون لە بواری فـیـزیۆثــێــراپـی</li>
+            <li>ناساندنی چارەسەری سرووشتی بە کۆمەڵگا</li>
+            <li>نەهێشتن و کەمکردنەوەی ئازار و نەخۆشییە درێژخایەنەکان</li>
+            <li>دابینکردنی پێشکەوتووترین ئامێرە جیهانیەکان</li>
+          </ul>
+        </div>
+        
+        <div class="card fade-in">
+          <h3>جیاوازی ئێمە</h3>
+          <p>ئێمە جیاوازین لەبەر:</p>
+          <ul>
+            <li>بینین و پشکنین لەلایەن دکتۆر و پسپۆڕی شارەزا</li>
+            <li>دیاریکردنی سیستەمی چارەسەر بە پێی حاڵەتی نەخۆشیەکە </li>
+            <li>بەکارهێنانی سەردەمیترین ئامێر و تەکنەلۆجیا</li>
+            <li>ستافی کارامە و خاوەن توانای پزیشکی</li>
+            <li>ڕاگرتنی پاکو خاوێنی بە ئەرکی خۆمان دەزانین</li>
+            <li>ئامێر و بڕاندە جیهانیەکان لە ڕووی بەکارهێنانەوە بە گرنگ دادەنێین</li>
+          </ul>
+        </div>
+        
+        <div class="card fade-in">
+          <h3>چارەسەری سرووشتی-فیزیۆثێراپی چیە؟</h3>
+          <p>چارەسەری فیزیایی بریتیە لە چارەسەرکردنی جەستە بە بێ بەکارهێنانی دەرمان و لەڕێگای ڕاهێنان، بەکارهێنانی ئامێر، ڕێنمایی و چالاکی ڕۆژانە چارەسەر دەکرێت.</p>
+          <h3>چارەسەرەکان چی لە خۆ دەگرن ؟</h3>
+        <ul><li> ڕاهێنانەوەی جەستەی .</li>
+        <li>بەکارهێنانی ئامێرە تیشکی و کارەباییەکان .</li>
+        <li>چارەسەرکردن بەڕیگای ئاوی و مەلەوانی .</li>
+        <li> ⁠ڕێنمای و ئاگادارکردنەوەی پزیشکی .</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section id="services" style="background: rgba(0, 156, 165, 0.03);">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>خزمەتگوزاریەکان</h2>
+        <p>خزمەتگوزاریە جیاوازەکانی کلینیکی هودا</p>
+      </div>
+      
+      <div class="cards-container">
+        <div class="card fade-in">
+          <div class="treatment-icon">
+            <i class="fas fa-user-md"></i>
+          </div>
+          <h3>بینین و پشکنین</h3>
+          <p>پشکنینی پزیشکی و بینین لە کلینیکەکەمان بەرامبەرە.</p>
+        </div>
+        
+        <div class="card fade-in">
+          <div class="treatment-icon">
+            <i class="fas fa-stethoscope"></i>
+          </div>
+          <h3>چارەسەری تایبەت</h3>
+          <p>چارەسەری تایبەت بەپێی پێویستی هەر نەخۆشێک. نرخی جەلسەکان دەستپێـدەکات لە 15,000 تا 50,000 (هەزار).</p>
+        </div>
+        
+        <div class="card fade-in">
+          <div class="treatment-icon">
+            <i class="fas fa-home"></i>
+          </div>
+          <h3>تیمی ماڵان</h3>
+          <p>دابین کردنی تیمی ڕاهێنراوی تایبەت بە چارەسەری سرووشتی لە ماڵەوە بۆ نەخۆشە تایبەتەکان.</p>
+          <ul><li>جەڵتەی دەماغ.
+</li>
+          <li>شەلەل دەماغ.</li>
+          <li>چارەسەری سروشتی دوای نەشتەرگەری
+گۆڕینی جومگەکان و پلاتین.</li>
+          <li>نەخۆشی (پارکینسۆن).</li>
+          <li>لاوازی ماسولکە و کەمی توانای ڕۆشتن و جوڵە(ئەو کەسانەی ماوەیەکی زۆرە لەسەر جێگان).</li>
+          <li>نەخۆشی ئینزیلاق و نەخۆشیە دەماریەکان و درێژ خایەنەکان.</li></ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Treatments Section -->
+  <section id="treatments">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>چارەسەرەکان</h2>
+        <p>ئێمە چارەسەری ئەم نەخۆشیانە دەکەین</p>
+      </div>
+      
+      <div class="treatments-grid">
+        <div class="treatment-item fade-in">
+          <div class="treatment-icon">
+           <i class="fa-brands fa-stack-overflow"></i>
+          </div>
+          <h3>ئینزیلاق و فەقەراتی مل و پشت</h3>
+        </div>
+        
+        <div class="treatment-item fade-in">
+          <div class="treatment-icon">
+            <i class="fas fa-running"></i>
+          </div>
+          <h3>سەوەفانی جومگەکانی ئه ژنۆ</h3>
+        </div>
+        
+        <div class="treatment-item fade-in">
+          <div class="treatment-icon">
+            <i class="fas fa-shoe-prints"></i>
+          </div>
+          <h3>ئیسکی زیادەی پاژنەی پێ</h3>
+        </div>
+        
+        <div class="treatment-item fade-in">
+          <div class="treatment-icon">
+            <i class="fas fa-smile"></i>
+          </div>
+          <h3>ئيفليجبوونى لایەکی دەموچاو</h3>
+        </div>
+        
+        <div class="treatment-item fade-in">
+          <div class="treatment-icon">
+            <i class="fas fa-procedures"></i>
+          </div>
+          <h3>شەلەلبوونی نیوەی لەش</h3>
+        </div>
+        <div class="treatment-item fade-in">
+          <div class="treatment-icon">
+          <i class="fa-solid fa-brain"></i>
+          </div>
+          <h3>جەڵطەی مێشک</h3>
+        </div>
+        
+        <div class="treatment-item fade-in">
+          <div class="treatment-icon">
+            <i class="fas fa-hand-paper"></i>
+          </div>
+          <h3>چارەسەری دەمارگیرانی دەست</h3>
+        </div>
+        
+        <div class="treatment-item fade-in">
+          <div class="treatment-icon">
+            <i class="fa-brands fa-squarespace"></i>
+          </div>
+          <h3>چارەسەری هەوکردنی ئانیشک</h3>
+        </div>
+        
+        <div class="treatment-item fade-in">
+          <div class="treatment-icon">
+            <i class="fas fa-user-injured"></i>
+          </div>
+          <h3>چارەسەری گرفتەکانی دوای شکان</h3>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Equipment Section -->
+  <section id="equipment" style="background: rgba(0, 156, 165, 0.03);">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>ئامێرە پزیشکیەکان</h2>
+        <p>سەردەمیترین ئامێرە پزیشکیەکان لە کلینیکی هودا</p>
+      </div>
+      
+      <div class="equipment-container">
+        <div class="equipment-card fade-in">
+          <div class="equipment-image">
+            <!-- Replace with your actual machine image -->
+            <img src="9.png" alt="ئامێری ئەلەکترۆتراپی">
+          </div>
+          <h3>Bed Massage</h3>
+          
+          <div class="equipment-specs">
+            <h4>به‌كاردێت بۆ چاره‌سه‌ری:</h4>
+            <ul>
+              <li>مەساج کردنی تەواوی جەستە.</li>
+              <li>ئارام کردنەوەی جەستەی لە دوای ماندوو بوونێکی زۆر.</li>
+              <li>خاو کردنەوە و پشوودان بە ماسوکەکان.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="equipment-card fade-in">
+          <div class="equipment-image">
+            <!-- Replace with your actual machine image -->
+            <img src="8.png" alt="ئامێری ئەلەکترۆتراپی">
+          </div>
+          <h3>IR Therapy</h3>
+        
+          <div class="equipment-specs">
+            <h4>به‌كاردێت بۆ چاره‌سه‌ری:</h4>
+            <ul>
+              <li>كه‌م كردنه‌وه‌ی ئازار .</li>
+              <li>خاوكردنه‌وه‌ی گرژی ماسولكه.</li>
+              <li>زیادكردنی  وروژمی سوڕی خوێن.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="equipment-card fade-in">
+          <div class="equipment-image">
+            <!-- Replace with your actual machine image -->
+            <img src="6.png" alt="ئامێری ئەلەکترۆتراپی">
+          </div>
+          <h3>Lymphastim  BTL</h3>
+         
+          <div class="equipment-specs">
+            <h4>به‌كاردێت بۆ چاره‌سه‌ری:</h4>
+            <ul>
+              <li>چاره‌سه‌ری ده‌والی.</li>
+              <li>ئاوساوی قاچه‌كان.</li>
+              <li>قورسی قاچه‌كان.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="equipment-card fade-in">
+          <div class="equipment-image">
+            <!-- Replace with your actual machine image -->
+            <img src="7.png" alt="ئامێری ئەلەکترۆتراپی">
+          </div>
+          <h3>Traction Therapy</h3>
+          
+          <div class="equipment-specs">
+            <h4>به‌كاردێت بۆ چاره‌سه‌ری:</h4>
+            <ul>
+              <li>چونه‌سه‌ریه‌كی بڕبره‌كان(انزلاق).</li>
+              <li>سڕبوونی ده‌ست و قاچ.</li>
+              <li>ئازاری درێژخایه‌نی پشت و مل.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="equipment-card fade-in">
+          <div class="equipment-image">
+            <!-- Replace with your actual machine image -->
+            <img src="2.png" alt="ئامێری ئەلەکترۆتراپی">
+          </div>
+          <h3>Laser Therapy</h3>
+          <div class="equipment-specs">
+            <h4>به‌كاردێت بۆ چاره‌سه‌ری:</h4>
+            <ul>
+              <li>سایه‌تیكا.</li>
+              <li>كێشه‌ی دیسكی به‌ینی فه‌قه‌راته‌كان .</li>
+              <li>هه‌وكردنی ژێه‌كان.</li>
+            </ul>
+          </div>
+        </div>
+        
+        <div class="equipment-card fade-in">
+          <div class="equipment-image">
+            <!-- Replace with your actual machine image -->
+            <img src="3.png" alt="ئامێری ئەلەکترۆتراپی">
+          </div>
+          <h3>TR Therapy BTL</h3>
+          <div class="equipment-specs">
+            <h4>به‌كاردێت بۆ چاره‌سه‌ری:</h4>
+            <ul>
+              <li>دووباره‌ دروست بوونه‌وه‌ی شانه‌ و خانه‌كان.</li>
+              <li>كه‌مكردنه‌وه‌ی ئاوساوی.</li>
+              <li>ئازاری فه‌قه‌رات.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="equipment-card fade-in">
+          <div class="equipment-image">
+            <!-- Replace with your actual machine image -->
+            <img src="5.png" alt="ئامێری ئەلەکترۆتراپی">
+          </div>
+          <h3>Tunel</h3>
+          <div class="equipment-specs">
+            <h4>به‌كاردێت بۆ چاره‌سه‌ری:</h4>
+            <ul>
+              <li>كه‌مردنه‌وه‌ی ئازار.</li>
+              <li>خاوكردنه‌وه‌ی ده‌مار و ماسولكه.</li>
+              <li>سڕبوون.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="equipment-card fade-in">
+          <div class="equipment-image">
+            <!-- Replace with your actual machine image -->
+            <img src="1.png" alt="ئامێری ئەلەکترۆتراپی">
+          </div>
+          <h3>Shockwave Therapy</h3>
+          <div class="equipment-specs">
+            <h4>به‌كاردێت بۆ چاره‌سه‌ری:</h4>
+            <ul>
+              <li>خاوكردنه‌وه‌ی ته‌شه‌نوجاتی 
+درێژخایه‌نی شان و مل.</li>
+              <li>ئێسكی زیادی پاژنه‌ی پێ.</li>
+              <li>كلسی شان.</li>
+            </ul>
+          </div>
+        </div>
+        <div class="equipment-card fade-in">
+          <div class="equipment-image">
+            <img src="4.png" alt="ئامێری ئەلەکترۆتراپی" width="3024" height="4032">
+          </div>
+          <h3>Ultrasound Therapy BTL</h3>
+          <div class="equipment-specs">
+            <h4>به‌كاردێت بۆ چاره‌سه‌ری:</h4>
+            <ul>
+              <li>ئازاری و ئیلتیهاباتی جومگه‌كان.</li>
+              <li> ئازار و گرژوبوونی ماسولكه‌كان.</li>
+              <li>هه‌وكردنی به‌سته‌ره .</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Team Section -->
+  <section id="team">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>تیمی ئێمە بۆ ماڵان</h2>
+        <p>تیمی ڕاهێنراوی تایبەتی کلینیکی هودا</p>
+      </div>
+      
+      <div class="team-container">
+        <div class="team-member fade-in">
+          <div class="member-img">
+            <i class="fas fa-user-md"></i>
+          </div>
+          <h3>ئاوات</h3>
+          <p>چارەسەرکاری سروشتی</p>
+        </div>
+        
+        <div class="team-member fade-in">
+          <div class="member-img">
+            <i class="fas fa-user-md"></i>
+          </div>
+          <h3>محمد</h3>
+         <p>چارەسەرکاری سروشتی</p>
+        </div>
+        
+        <div class="team-member fade-in">
+          <div class="member-img">
+            <i class="fas fa-user-md"></i>
+          </div>
+          <h3> ئاکۆ</h3>
+       <p>چارەسەرکاری سروشتی</p>
+        </div>
+        
+        <div class="team-member fade-in">
+          <div class="member-img">
+            <i class="fas fa-user-md"></i>
+          </div>
+          <h3>هێمن</h3>
+          <p>چارەسەرکاری سروشتی</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section id="contact" style="background: rgba(0, 156, 165, 0.03);">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>پەیوەندی</h2>
+        <p>پەیوەندیمان پێوە بکە بۆ زانیاری زیاتر</p>
+      </div>
+      
+      <div class="contact-container">
+        <div class="contact-info fade-in">
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-map-marker-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h4>ناونیشان</h4>
+              <p>سلێمانی - شەقامی شەست مەتری خوارەوە (جووت سایدی گەرەکی ئابڵاخ) بەرامبەر گروپی هەڵەبجە — تەنیشت شەوانە و رۆژانەی سارا</p>
+              <a href="https://maps.app.goo.gl/YZcrzHjSmjPeJ4vW8?g_st=ipc" target="_blank" class="small">کرتە بکە بۆ نیشاندانی ناونیشان</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-phone-alt"></i>
+            </div>
+            <div class="contact-details">
+              <h4>ژمارە تەلەفۆن</h4>
+              <p>٠٧٧٣ ١٥٥ ٠٧٧٣</p>
+              <a href="tel:+9647731550773" class="cta-button" style="display: inline-block; margin-top: 10px; padding: 10px 20px;">پەیوەندی تەلەفۆنی</a>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="far fa-clock"></i>
+            </div>
+            <div class="contact-details">
+              <h4>کات</h4>
+              <p>شەمە تا پێنج شەمە</p>
+              <p>کاتژمێر 2:00 PM تاPM 6:00 </p>
+            </div>
+          </div>
+          
+          <div class="contact-item">
+            <div class="contact-icon">
+              <i class="fas fa-money-bill-wave"></i>
+            </div>
+            <div class="contact-details">
+              <h4>نرخەکان</h4>
+              <p>نرخی بینین و پشکنین: بێ بەرامبەرە</p>
+              <p>نرخی جەلسەکان: دەستپێک لە 15,000 تا 50,000 (هەزار)</p>
+            </div>
+          </div>
+        </div>
+        
+        <div class="contact-form fade-in">
+    <form id="appointmentForm">
+        <div class="form-group">
+            <label for="name">ناو</label>
+            <input type="text" id="name" name="name" class="form-control" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="phone">ژمارە تەلەفۆن</label>
+            <input type="tel" id="phone" name="phone" class="form-control" required>
+        </div>
+        
+        <div class="form-group">
+            <label for="email">ئیمەیڵ</label>
+            <input type="email" id="email" name="email" class="form-control">
+        </div>
+        
+        <div class="form-group">
+            <label for="message">پەیام</label>
+            <textarea id="message" name="message" class="form-control" required></textarea>
+        </div>
+        
+        <button type="submit" class="submit-btn">نێردنی پەیام</button>
+        
+        <!-- Messages -->
+        
+        
+    </form>
+</div>
+
+<!-- Add EmailJS Script -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+<script>
+    // Step 1: Initialize EmailJS with your Public Key
+    // REPLACE 'YOUR_PUBLIC_KEY' with your actual EmailJS Public Key
+    emailjs.init('YOUR_PUBLIC_KEY');
+    
+    // Step 2: Add event listener to the form
+    document.getElementById('appointmentForm').addEventListener('submit', function(event) {
+        // Prevent default form submission
+        event.preventDefault();
+        
+        // Show loading state
+        const submitBtn = document.querySelector('.submit-btn');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'لە ناردندا...';
+        submitBtn.disabled = true;
+        
+        // Hide previous messages
+        document.getElementById('successMessage').style.display = 'none';
+        document.getElementById('errorMessage').style.display = 'none';
+        
+        // Step 3: Send email using EmailJS
+        // REPLACE THESE IDs with your actual IDs from EmailJS
+        emailjs.sendForm(
+            'YOUR_SERVICE_ID',    // Service ID (e.g., 'service_abc123')
+            'YOUR_TEMPLATE_ID',   // Template ID (e.g., 'template_xyz456')
+            this                   // The form element
+        )
+        .then(function(response) {
+            console.log('Success!', response.status, response.text);
+            
+            // Show success message
+            document.getElementById('successMessage').style.display = 'block';
+            
+            // Reset the form
+            document.getElementById('appointmentForm').reset();
+            
+            // Reset button
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+            
+            // Hide success message after 5 seconds
+            setTimeout(() => {
+                document.getElementById('successMessage').style.display = 'none';
+            }, 5000);
+        })
+        .catch(function(error) {
+            console.error('Failed...', error);
+            
+            // Show error message
+            document.getElementById('errorMessage').style.display = 'block';
+            
+            // Reset button
+            submitBtn.textContent = originalText;
+            submitBtn.disabled = false;
+        });
+    });
+</script>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <h3>کلینیکی هودا</h3>
+          <p>چارەسەری سرووشتی — یەکێک لە کاریگەرترین رێگان بۆ گەڕاندنەوە و ژیاندنەوەی توانای جەستەیی</p>
+          <div class="social-links">
+            <a href="https://www.facebook.com/share/1CrahUrcms/?mibextid=wwXIfr" class="social-link"><i class="fab fa-facebook-f"></i></a>
+            <a href="https://www.instagram.com/huda_physiotherapy_clinic?igsh=ajY1bXEycjk3Nmxx&utm_source=qr" class="social-link"><i class="fab fa-instagram"></i></a>
+            <a href="https://www.tiktok.com/@huda_clinic22?_r=1&_t=ZS-91t0TpJN9N7" class="social-link"><i class="fab fa-tiktok"></i></a>
+            <a href="https://wa.me/9647731550773" class="social-link"><i class="fab fa-whatsapp"></i></a>
+             <a href="https://t.me/huda_physiotherapy_clinic" class="social-link"><i class="fab fa-telegram"></i></a>
+
+          </div>
+        </div>
+        
+        <div class="footer-column">
+          <h3>بەستەرەکان</h3>
+          <ul class="footer-links">
+            <li><a href="#home">سەرەکی</a></li>
+            <li><a href="#about">دەربارەی ئێمە</a></li>
+            <li><a href="#services">خزمەتگوزاریەکان</a></li>
+            <li><a href="#treatments">چارەسەرەکان</a></li>
+            <li><a href="#equipment">ئامێرەکان</a></li>
+            <li><a href="#team">تیم</a></li>
+            <li><a href="#contact">پەیوەندی</a></li>
+          </ul>
+        </div>
+        
+        <div class="footer-column">
+          <h3>پەیوەندی</h3>
+          <p><i class="fas fa-map-marker-alt"></i> ناونیشان : سلێمانی - شەقامی شەست مەتری خوارەوە
+( جووت سایدی گەرەکی ئابڵاخ ) بەرامبەر گروپی هەڵەبجە 
+ تەنیشت شەوانە و رۆژانەی سارا
+</p>
+          <p><i class="fas fa-phone-alt"></i> ژمارە تەلەفۆن : ٠٧٧٣ ١٥٥ ٠٧٧٣</p>
+          <p><i class="far fa-clock"></i>کاتی دەوام کردن :  شەمە تا پێنج شەمە - 2:00 PM تا 7:00 PM</p>
+        </div>
+      </div>
+      
+      <div class="footer-bottom">
+        <p>© کلینیکی هودا   </p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Back to Top Button -->
+  <a href="#home" class="back-to-top" id="backToTop">
+    <i class="fas fa-chevron-up"></i>
+  </a>
+
+  <script>
+    // Mobile Navigation Toggle
+    const navToggle = document.getElementById('navToggle');
+    const mainNav = document.getElementById('mainNav');
+    const closeMenu = document.getElementById('closeMenu');
+    
+    navToggle.addEventListener('click', () => {
+      mainNav.classList.add('active');
+    });
+    
+    closeMenu.addEventListener('click', () => {
+      mainNav.classList.remove('active');
+    });
+    
+    // Close mobile menu when clicking on a link
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mainNav.classList.remove('active');
+      });
+    });
+    
+    // Scroll Animation
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const fadeInOnScroll = () => {
+      fadeElements.forEach(element => {
+        const elementTop = element.getBoundingClientRect().top;
+        const elementVisible = 150;
+        
+        if (elementTop < window.innerHeight - elementVisible) {
+          element.classList.add('visible');
+        }
+      });
+    };
+    
+    // Back to Top Button
+    const backToTopButton = document.getElementById('backToTop');
+    
+    const toggleBackToTop = () => {
+      if (window.scrollY > 300) {
+        backToTopButton.classList.add('visible');
+      } else {
+        backToTopButton.classList.remove('visible');
+      }
+    };
+    
+    // Check on load and scroll
+    window.addEventListener('load', () => {
+      fadeInOnScroll();
+      toggleBackToTop();
+      
+      // Anime.js animations
+      anime({
+        targets: '.logo-img',
+        rotate: [0, 360],
+        duration: 2000,
+        easing: 'easeInOutSine',
+        loop: true
+      });
+      
+      anime({
+        targets: '.hero-text h2',
+        translateY: [50, 0],
+        opacity: [0, 1],
+        duration: 1200,
+        easing: 'easeOutCubic'
+      });
+      
+      anime({
+        targets: '.hero-text p',
+        translateY: [30, 0],
+        opacity: [0, 1],
+        duration: 1000,
+        delay: 300,
+        easing: 'easeOutCubic'
+      });
+      
+      anime({
+        targets: '.cta-button',
+        translateY: [30, 0],
+        opacity: [0, 1],
+        duration: 800,
+        delay: 600,
+        easing: 'easeOutCubic'
+      });
+      
+      anime({
+        targets: '.hero-img',
+        translateX: [50, 0],
+        opacity: [0, 1],
+        duration: 1000,
+        delay: 400,
+        easing: 'easeOutCubic'
+      });
+    });
+    
+    window.addEventListener('scroll', () => {
+      fadeInOnScroll();
+      toggleBackToTop();
+    });
+    
+    // Form Submission
+    const appointmentForm = document.getElementById('appointmentForm');
+    
+    appointmentForm.addEventListener('submit', (e) => {
+      e.preventDefault();
+      
+      // Get form values
+      const name = document.getElementById('name').value;
+      const phone = document.getElementById('phone').value;
+      const email = document.getElementById('email').value;
+      const message = document.getElementById('message').value;
+      
+      // In a real application, you would send this data to a server
+      // For now, we'll just show an alert
+      alert(`سوپاس بۆ پەیامەکەت ${name}! پەیامەکەت وەرگیرا و بەم زوانە پەیوەندیت پێوە دەکەینەوە: ${phone}`);
+      
+      // Reset form
+      appointmentForm.reset();
+    });
+    
+    // Theme Toggle
+    const themeToggle = document.getElementById('themeToggle');
+    const themeIcon = themeToggle.querySelector('i');
+    
+    // Check for saved theme preference or default to light
+    const currentTheme = localStorage.getItem('theme') || 'light';
+    
+    // Apply the saved theme
+    if (currentTheme === 'dark') {
+      document.documentElement.setAttribute('data-theme', 'dark');
+      themeIcon.classList.remove('fa-moon');
+      themeIcon.classList.add('fa-sun');
+    }
+    
+    themeToggle.addEventListener('click', () => {
+      // Toggle theme
+      if (document.documentElement.getAttribute('data-theme') === 'dark') {
+        document.documentElement.removeAttribute('data-theme');
+        localStorage.setItem('theme', 'light');
+        themeIcon.classList.remove('fa-sun');
+        themeIcon.classList.add('fa-moon');
+        
+        // Anime.js animation for theme change
+        anime({
+          targets: 'body',
+          backgroundColor: ['#121212', '#f8fdfb'],
+          duration: 500,
+          easing: 'easeInOutQuad'
+        });
+      } else {
+        document.documentElement.setAttribute('data-theme', 'dark');
+        localStorage.setItem('theme', 'dark');
+        themeIcon.classList.remove('fa-moon');
+        themeIcon.classList.add('fa-sun');
+        
+        // Anime.js animation for theme change
+        anime({
+          targets: 'body',
+          backgroundColor: ['#f8fdfb', '#121212'],
+          duration: 500,
+          easing: 'easeInOutQuad'
+        });
+      }
+    });
+  </script>
+</body>
+</html>
