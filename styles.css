@@ -64,12 +64,12 @@
     .theme-toggle {
       position: fixed;
       top: 20px;
-      left: 20px;
+      margin-left: 40px;
       z-index: 1000;
       background: var(--card);
       border: none;
-      width: 50px;
-      height: 50px;
+      width: 70px;
+      height: 70px;
       border-radius: 50%;
       display: flex;
       align-items: center;
@@ -822,8 +822,8 @@
     }
 
     .social-link {
-      width: 40px;
-      height: 40px;
+      width: 70px;
+      height: 70px;
       border-radius: 50%;
       background: rgba(255, 255, 255, 0.1);
       display: flex;
